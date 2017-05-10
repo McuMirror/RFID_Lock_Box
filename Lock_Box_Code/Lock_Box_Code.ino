@@ -132,6 +132,7 @@ void stateMachine() {
 
         free(cardID);
 
+        //write a new sector trailer with secure, non-standard key A, key B, and acess bits
         myRFID.AddicoreRFID_Write(key_addr, sector_trailer);
       }
       //reset the RFID reader and RFID card so that they can reconnect or connect to different things
